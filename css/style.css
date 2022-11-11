@@ -1,14 +1,18 @@
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --main-background-color: #2f303a;
+  --secondary-background-color: #f5f4fa;
+  --highlighting-color: #2196f3;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
 }
 
-:root {
-  --main-font: "Roboto";
-  --main-color: ;
-}
-
-p {
-  font-family: var(--main-font);
+.header-link.current {
+  color: var(--highlighting-color);
 }
 
 .link {
@@ -20,13 +24,13 @@ p {
 }
 
 .header-logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 
-  color: #2196f3;
+  color: var(--highlighting-color);
 }
 
 .header-link {
@@ -35,12 +39,12 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #212121;
+  color: inherit;
 }
 
 .header-link:hover,
 .header-link:focus {
-  color: #2196f3;
+  color: var(--highlighting-color);
 }
 
 .header-email,
@@ -50,21 +54,21 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--secondary-text-color);
 }
 
 .header-email:hover,
 .header-email:focus {
-  color: #2196f3;
+  color: var(--highlighting-color);
 }
 
 .header-tel:hover,
 .header-tel:focus {
-  color: #2196f3;
+  color: var(--highlighting-color);
 }
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--main-background-color);
   width: 1600px;
 }
 
@@ -81,13 +85,20 @@ p {
 }
 
 .hero-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: var(--highlighting-color);
+}
+
+.hero-btn:hover,
+.hero-button:focus {
+  color: var(--highlighting-color);
+  background-color: #ffffff;
 }
 
 .section-subtitle {
@@ -96,17 +107,14 @@ p {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  color: #212121;
 }
 
 .section-text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--secondary-text-color);
 }
 
 .section-title {
@@ -115,12 +123,15 @@ p {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-
-  color: #212121;
 }
 
 .team-members {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color);
+}
+
+.member-card {
+  background-color: #ffffff;
+  width: 270px;
 }
 
 .member-name {
@@ -129,22 +140,18 @@ p {
   line-height: 1.187;
 
   letter-spacing: 0.03em;
-
-  color: #212121;
 }
 
 .member-position {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.187;
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--secondary-text-color);
 }
 
 .address-link {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 
@@ -154,7 +161,6 @@ p {
 }
 
 .footer-link {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 
@@ -163,8 +169,15 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.address-link:hover,
+.address-link:focus,
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--highlighting-color);
+}
+
 footer {
-  background-color: #2f303a;
+  background-color: var(--main-background-color);
 }
 
 address {
@@ -172,20 +185,21 @@ address {
 }
 
 .filter-btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
 
   text-align: center;
   letter-spacing: 0.03em;
-  background-color: #f5f4fa;
-  color: #212121;
+  color: var(--main-text-color);
+  background-color: var(--secondary-background-color);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   color: #ffffff;
-  background-color: #2196f3;
+  background-color: var(--highlighting-color);
 }
 
 .portfolio-subtitle {
@@ -194,16 +208,13 @@ address {
   line-height: 2;
 
   letter-spacing: 0.06em;
-
-  color: #212121;
 }
 
 .portfolio-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
 
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--secondary-text-color);
 }
